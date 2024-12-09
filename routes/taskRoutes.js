@@ -3,6 +3,11 @@ const Task = require('../models/taskModel');
 const taskValidationSchema = require('../validation/taskValidation');
 const router = express.Router();
 
+// Welcome to the API
+router.get('/', async (req, res) =>{
+  res.send("Welcome to the TASK MANAGER Application API")
+});
+
 
 // Create a new task
 router.post('/tasks', async (req, res) =>{

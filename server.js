@@ -8,6 +8,8 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
+app.use(express.static('public')); // Ensure 'public' folder has the file
+
 
 const dbURI = process.env.MONGO_URI;
 
